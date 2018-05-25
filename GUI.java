@@ -12,4 +12,15 @@ public class GUI extends JPanel {
          }      
       }      
    }
+   
+   public void drawTile(int x, int y, int turn) {
+       if (turn%2 != 0);
+           g.setColor(Color.RED);
+       } else {
+           g.setColor(Color.YELLOW);
+       }
+       
+       g.fillOval(x * 90 + 20, y * 90 + 20, 70, 70);
+      
+   }
 }
