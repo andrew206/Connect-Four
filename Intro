@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+
+public class Intro {
+   public static void main(String[] args) {
+      Scanner console = new Scanner(System.in);
+      text(console);
+   }
+       
+   public static void text(Scanner console) {   
+      System.out.println("Welcome to connect four!");
+      System.out.print("Would you like to know how to play? ");
+      String answer = console.next();
+      if(answer.equals("Yes")) {
+         System.out.println();
+         System.out.println("The goal of connect four is to get four disks in a row, and");
+         System.out.println("each player takes a turn dropping a disk down.");
+         System.out.println("Each column is labeled 1-7. Type the number and hit enter"); 
+         System.out.println("for the column that you want to drop your disk down.");
+      }
+      System.out.println();
+      System.out.print("Are you ready to play? ");
+      String ready = console.next();
+      if(ready.equals("Yes")) {
+         System.out.print("call connect four class");
+      }
+   }
+}   
