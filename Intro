@@ -15,14 +15,16 @@ public class Intro {
          System.out.println();
          System.out.println("The goal of connect four is to get four disks in a row, and");
          System.out.println("each player takes a turn dropping a disk down.");
-         System.out.println("Each column is labeled 1-7. Type the number and hit enter"); 
-         System.out.println("for the column that you want to drop your disk down.");
+         System.out.println("Each position on the connect four board has an x and y coordinate."); 
+         System.out.println("Starting in the top left, the x goes to to 7 and the y goes to 6.");
+         System.out.println("Each time it is your turn, you will be prompted for the coordinates at");
+         System.out.println("which you would like to place your connect four disk.");
       }
       System.out.println();
       System.out.print("Are you ready to play? ");
       String ready = console.next();
       if(ready.equals("Yes")) {
-         System.out.print("call connect four class");
+         //ConnectFour();   
       }
    }
 }   
