@@ -21,8 +21,10 @@ public class ConnectFour {
       int turn = 1;
       
       Graphics g = panel.getGraphics();
+      int[] y = new int[7]; 
       
       while (!win) {
+          
           if (turn%2 != 0) {
               System.out.println("Red's Move:");
           } else {
@@ -32,10 +34,10 @@ public class ConnectFour {
           System.out.print("x: ");
           int x = console.nextInt() - 1;
           
-          System.out.print("y: ");
-          int y = console.nextInt() - 1;
+          //System.out.print("y: ");
+          //int y = console.nextInt() - 1;
           System.out.println();
-          
+          y[x]++;
           turn++;
           GUI.drawTile(x, y, turn, g);
       }
