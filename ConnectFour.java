@@ -26,16 +26,14 @@ public class ConnectFour {
       while (!win) {
           
           if (turn%2 != 0) {
-              System.out.println("Red's Move:");
+              System.out.println("Red's Move");
           } else {
-              System.out.println("Yellow's Move:");
+              System.out.println("Yellow's Move");
           }
           
-          System.out.print("x: ");
+          System.out.print("Column (1-7) : ");
           int x = console.nextInt() - 1;
           
-          //System.out.print("y: ");
-          //int y = console.nextInt() - 1;
           System.out.println();
           y[x]++;
           turn++;
