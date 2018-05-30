@@ -20,7 +20,7 @@ public class GUI extends JPanel {
            g.setColor(Color.RED);
        }
        
-       g.fillOval(x * 90 + 20, (y[x]-1) * 90 + 20, 70, 70);
+       g.fillOval(x * 90 + 20, 470 - (y[x]-1) * 90, 70, 70);
       
    }
 }
