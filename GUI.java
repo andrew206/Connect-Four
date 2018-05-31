@@ -13,14 +13,16 @@ public class GUI extends JPanel {
       }      
    }
    
-   public void drawTile(int x, int[] y, int turn, Graphics g) {
-       if (turn%2 != 0) {
-           g.setColor(Color.YELLOW);
-       } else {
-           g.setColor(Color.RED);
-       }
-       
-       g.fillOval(x * 90 + 20, 470 - (y[x]-1) * 90, 70, 70);
-      
+   public String[] drawTile(int x, int[] y, int turn, Graphics g) {
+      String[][] grid = new String[6][7];   
+      if (turn%2 != 0) {
+         g.setColor(Color.YELLOW);
+         grid[y[x] - 1][x] = "yellow";
+      } else {
+         g.setColor(Color.RED);
+         grid[y[x] - 1][x] = "red";
+      }  
+      g.fillOval(x * 90 + 20, 470 - (y[x] - 1) * 90, 70, 70); 
+      return grid[][];    
    }
 }
