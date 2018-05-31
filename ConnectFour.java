@@ -39,5 +39,13 @@ public class ConnectFour {
           turn++;
           GUI.drawTile(x, y, turn, g);
       }
+   }
+   
+   public static boolean win() {
+      if (Win.determineWinner()) {
+         return true;
+      } else {
+         return false;
+      }     
    } 
 }
