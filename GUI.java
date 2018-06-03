@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.*;
+import java.io.*;
 
 public class GUI extends JPanel {
    public void paintComponent(Graphics g) {
@@ -13,16 +15,19 @@ public class GUI extends JPanel {
       }      
    }
    
-   public String[] drawTile(int x, int[] y, int turn, Graphics g) {
+   public String drawTile(int x, int[] y, int turn, Graphics g) {
       String[][] grid = new String[6][7];   
+      String color = "";
       if (turn%2 != 0) {
          g.setColor(Color.YELLOW);
-         grid[y[x] - 1][x] = "yellow";
+         //grid[y[x] - 1][x] = "yellow";
+         color = "yellow";
       } else {
          g.setColor(Color.RED);
-         grid[y[x] - 1][x] = "red";
+         //grid[y[x] - 1][x] = "red";
+         color = "red";
       }  
       g.fillOval(x * 90 + 20, 470 - (y[x] - 1) * 90, 70, 70); 
-      return grid[][];    
+      return color;    
    }
 }
