@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.*;
 import java.io.*;
 
-public class ConnectFour {
+public class ConnectFour extends GUI {
    public static void main(String[] args) {
       JFrame frame = new JFrame();
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -22,7 +22,7 @@ public class ConnectFour {
       
       Graphics g = panel.getGraphics();
       int[] y = new int[7]; 
-      
+      String[][] test = new String[6][7];
       while (!win) {
           
           if (turn%2 != 0) {
@@ -37,15 +37,15 @@ public class ConnectFour {
           System.out.println();
           y[x]++;
           turn++;
-          GUI.drawTile(x, y, turn, g);
+          test[y[x] - 1][x] = GUI.drawTile(x, y, turn, g);   
+          System.out.println(Arrays.deepToString(test));   
+          //win(test);    
       }
    }
    
-   public static boolean win() {
-      if (Win.determineWinner()) {
-         return true;
-      } else {
-         return false;
-      }     
-   } 
+   /*public static void win(String[][] test) {
+      if (test[0][0].equals("red") && test[1][0].equals("red") && test[2][0].equals("red") && test[3][0].equals("red")) {
+         System.out.println("Red wins");
+      }
+   }*/
 }
