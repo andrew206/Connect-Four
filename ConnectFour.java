@@ -23,8 +23,13 @@ public class ConnectFour extends GUI {
       Graphics g = panel.getGraphics();
       int[] y = new int[7]; 
       String[][] test = new String[6][7];
-      while (!win) {
-          
+      for (int i = 0; i < 6; i++) {
+         for (int j = 0; j < 7; j++) { 
+            test[i][j] = "empty";
+         }
+      }
+      
+      while (!win) {       
           if (turn%2 != 0) {
               System.out.println("Red's Move");
           } else {
@@ -38,14 +43,8 @@ public class ConnectFour extends GUI {
           y[x]++;
           turn++;
           test[y[x] - 1][x] = GUI.drawTile(x, y, turn, g);   
-          System.out.println(Arrays.deepToString(test));   
-          //win(test);    
+          //System.out.println(Arrays.deepToString(test));   
+          win = Win.win(test);            
       }
    }
-   
-   /*public static void win(String[][] test) {
-      if (test[0][0].equals("red") && test[1][0].equals("red") && test[2][0].equals("red") && test[3][0].equals("red")) {
-         System.out.println("Red wins");
-      }
-   }*/
-}
+ }
