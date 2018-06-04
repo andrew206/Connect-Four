@@ -24,7 +24,7 @@ public class GUI extends JPanel {
          g.setColor(Color.RED);
          color = "red";
       }  
-      g.fillOval(x * 90 + 20, 470 - (y[x] - 1) * 90, 70, 70); 
+      g.fillOval(x * 90 + 20, 470 - (y[x] - 1) * 90, 72, 72); 
       return color;    
    }
 }
