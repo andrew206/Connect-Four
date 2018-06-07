@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 import java.util.*;
 import java.io.*;
 
@@ -33,6 +34,12 @@ public class ConnectFour extends GUI {
       b5.setBounds(380, 555, 70, 30);
       b6.setBounds(470, 555, 70, 30);
       b7.setBounds(560, 555, 70, 30);
+      
+      b1.addActionListener(new ActionListener()
+         {  public void actionPerformed(ActionEvent evt) {
+               System.out.println("Button 1 pressed");
+            }
+         });
   
       panel.add(b1);
       panel.add(b2);
