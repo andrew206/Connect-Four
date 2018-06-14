@@ -1,3 +1,11 @@
+/**
+ * Game.Java
+ * Assignment: Final Project
+ * Purpose: To show what I have learned this year.
+ *
+ * @version 06/13/18
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
