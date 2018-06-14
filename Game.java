@@ -24,7 +24,8 @@ public class Game {
    Graphics g = null;
    int[] y = new int[7]; 
    String[][] grid = new String[6][7];
- 
+   
+   //trigger for buttons
    private void EventTriggered(int turn2, int column) {   
       if (g == null) {
          g = panel.getGraphics();
@@ -49,6 +50,7 @@ public class Game {
       win = Win.win(grid);
    }
    
+   //draws the blue board and the buttons, starts the action listener
    public void start() {
       text.setText("Red's Move");
       text.setForeground(Color.RED);
