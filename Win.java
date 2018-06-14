@@ -1,9 +1,18 @@
+/**
+ * Win.Java
+ * Assignment: Final Project
+ * Purpose: To show what I have learned this year.
+ *
+ * @version 06/13/18
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 import java.io.*;
 
 public class Win {
+   //checks to see if a user has won the game
    public static boolean win(String[][] grid) {
       //red
       //vertical check

@@ -1,3 +1,11 @@
+/**
+ * Game.Java
+ * Assignment: Final Project
+ * Purpose: To show what I have learned this year.
+ *
+ * @version 06/13/18
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -5,58 +13,35 @@ import java.util.*;
 import java.io.*;
 
 public class Game {
-   JFrame frame = new JFrame();
    GUI GUI = new GUI();
    GUI panel = new GUI();
-   JLabel text = new JLabel();
    int turn = 1;
    boolean win = false;
-   String label = "Red's Move";
    
    Graphics g = null;
    int[] y = new int[7]; 
    String[][] grid = new String[6][7];
  
+   //trigger for buttons
    private void EventTriggered(int turn2, int column) {   
       if (g == null) {
          g = panel.getGraphics();
-      }
-      
-      if (turn%2!=0) {
-         label = "Red's Move";
-         text.setForeground(Color.RED);
-      } else {
-         label = "Yellow's Move";
-         text.setForeground(Color.YELLOW);
-      }
-      
-      text.setText(label);
-      text.setBounds(0, 600, 660, 30);
-      text.setHorizontalAlignment(JLabel.CENTER);
-      text.setFont(new Font("Arial", 0, 30));
-      panel.add(text);
-          
+      }     
       y[column]++;
       grid[y[column] - 1][column] = GUI.drawTile(column, y, turn2, g);   
       win = Win.win(grid);
    }
    
+   //draws the blue board and the buttons, starts the action listener
    public void start() {
-      text.setText("Red's Move");
-      text.setForeground(Color.RED);
-      text.setBounds(0, 600, 660, 30);
-      text.setHorizontalAlignment(JLabel.CENTER);
-      text.setFont(new Font("Arial", 0, 30));
-      panel.add(text);
-      
       for (int i = 0; i < 6; i++) {
          for (int j = 0; j < 7; j++) { 
             grid[i][j] = "empty";
          }
       }
-      
+      JFrame frame = new JFrame();
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      frame.setSize(660, 670);
+      frame.setSize(670, 635);
       frame.setTitle("Connect Four");
       
       panel.setLayout(null);
@@ -64,7 +49,9 @@ public class Game {
       frame.add(panel);
       frame.setVisible(true);
       frame.setResizable(false);
-      
+           
+      GUI GUI = new GUI(); 
+
       JButton b1 = new JButton("1");
       JButton b2 = new JButton("2");
       JButton b3 = new JButton("3");
@@ -135,8 +122,7 @@ public class Game {
             {
                EventTriggered(++turn, 6); 
             }    
-         });
-      
+         });   
            
       panel.add(b1);
       panel.add(b2);
