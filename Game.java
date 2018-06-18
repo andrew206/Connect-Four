@@ -91,6 +91,107 @@ public class Game {
       b6.setBounds(470, 555, 70, 30);
       b7.setBounds(560, 555, 70, 30);
       
+      
+      //mouse listeners
+      b1.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mouseEntered(java.awt.event.MouseEvent evt) {
+            if (turn%2!=0) {
+               b1.setBackground(Color.RED);
+            } else {
+               b1.setBackground(Color.YELLOW);
+            };
+         }
+
+         public void mouseExited(java.awt.event.MouseEvent evt) {
+            b1.setBackground(UIManager.getColor("control"));
+         }
+      });
+      
+      b2.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mouseEntered(java.awt.event.MouseEvent evt) {
+            if (turn%2!=0) {
+               b2.setBackground(Color.RED);
+            } else {
+               b2.setBackground(Color.YELLOW);
+            };
+         }
+
+         public void mouseExited(java.awt.event.MouseEvent evt) {
+            b2.setBackground(UIManager.getColor("control"));
+         }
+      });
+      
+      b3.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mouseEntered(java.awt.event.MouseEvent evt) {
+            if (turn%2!=0) {
+               b3.setBackground(Color.RED);
+            } else {
+               b3.setBackground(Color.YELLOW);
+            };
+         }
+
+         public void mouseExited(java.awt.event.MouseEvent evt) {
+            b3.setBackground(UIManager.getColor("control"));
+         }
+      });
+      
+      b4.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mouseEntered(java.awt.event.MouseEvent evt) {
+            if (turn%2!=0) {
+               b4.setBackground(Color.RED);
+            } else {
+               b4.setBackground(Color.YELLOW);
+            };
+         }
+
+         public void mouseExited(java.awt.event.MouseEvent evt) {
+            b4.setBackground(UIManager.getColor("control"));
+         }
+      });
+      
+      b5.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mouseEntered(java.awt.event.MouseEvent evt) {
+            if (turn%2!=0) {
+               b5.setBackground(Color.RED);
+            } else {
+               b5.setBackground(Color.YELLOW);
+            };
+         }
+
+         public void mouseExited(java.awt.event.MouseEvent evt) {
+            b5.setBackground(UIManager.getColor("control"));
+         }
+      });
+      
+      b6.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mouseEntered(java.awt.event.MouseEvent evt) {
+            if (turn%2!=0) {
+               b6.setBackground(Color.RED);
+            } else {
+               b6.setBackground(Color.YELLOW);
+            };
+         }
+
+         public void mouseExited(java.awt.event.MouseEvent evt) {
+            b6.setBackground(UIManager.getColor("control"));
+         }
+      });
+      
+      b7.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mouseEntered(java.awt.event.MouseEvent evt) {
+            if (turn%2!=0) {
+               b7.setBackground(Color.RED);
+            } else {
+               b7.setBackground(Color.YELLOW);
+            };
+         }
+
+         public void mouseExited(java.awt.event.MouseEvent evt) {
+            b7.setBackground(UIManager.getColor("control"));
+         }
+      });
+                                    
+      //;action listeners
       b1.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
