@@ -91,6 +91,22 @@ public class Game {
       b6.setBounds(470, 555, 70, 30);
       b7.setBounds(560, 555, 70, 30);
       
+      b1.setBackground(Color.CYAN);
+      b2.setBackground(Color.CYAN);
+      b3.setBackground(Color.CYAN);
+      b4.setBackground(Color.CYAN);
+      b5.setBackground(Color.CYAN);
+      b6.setBackground(Color.CYAN);
+      b7.setBackground(Color.CYAN);
+      
+      b1.setBorderPainted(false);
+      b2.setBorderPainted(false);
+      b3.setBorderPainted(false);
+      b4.setBorderPainted(false);
+      b5.setBorderPainted(false);
+      b6.setBorderPainted(false);
+      b7.setBorderPainted(false);
+      
       
       //mouse listeners
       b1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -103,7 +119,7 @@ public class Game {
          }
 
          public void mouseExited(java.awt.event.MouseEvent evt) {
-            b1.setBackground(UIManager.getColor("control"));
+            b1.setBackground(Color.CYAN);
          }
       });
       
@@ -117,7 +133,7 @@ public class Game {
          }
 
          public void mouseExited(java.awt.event.MouseEvent evt) {
-            b2.setBackground(UIManager.getColor("control"));
+            b2.setBackground(Color.CYAN);
          }
       });
       
@@ -131,7 +147,7 @@ public class Game {
          }
 
          public void mouseExited(java.awt.event.MouseEvent evt) {
-            b3.setBackground(UIManager.getColor("control"));
+            b3.setBackground(Color.CYAN);
          }
       });
       
@@ -145,7 +161,7 @@ public class Game {
          }
 
          public void mouseExited(java.awt.event.MouseEvent evt) {
-            b4.setBackground(UIManager.getColor("control"));
+            b4.setBackground(Color.CYAN);
          }
       });
       
@@ -159,7 +175,7 @@ public class Game {
          }
 
          public void mouseExited(java.awt.event.MouseEvent evt) {
-            b5.setBackground(UIManager.getColor("control"));
+            b5.setBackground(Color.CYAN);
          }
       });
       
@@ -173,7 +189,7 @@ public class Game {
          }
 
          public void mouseExited(java.awt.event.MouseEvent evt) {
-            b6.setBackground(UIManager.getColor("control"));
+            b6.setBackground(Color.CYAN);
          }
       });
       
@@ -187,7 +203,7 @@ public class Game {
          }
 
          public void mouseExited(java.awt.event.MouseEvent evt) {
-            b7.setBackground(UIManager.getColor("control"));
+            b7.setBackground(Color.CYAN);
          }
       });
                                     
