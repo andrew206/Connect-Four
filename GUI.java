@@ -18,8 +18,8 @@ public class GUI extends JPanel {
       g.setColor(Color.WHITE);
       for (int i = 0; i < 7; i++) {
          for (int j = 0; j < 6; j++) {         
-            g.fillOval(i * 90 + 20, 90 + 20, 70, 70);  
-            g.fillOval(i * 90 + 20, j * 90 + 20, 70, 70); 
+            g.fillOval(i * 90 + 20, 90 + 70, 70, 70);  
+            g.fillOval(i * 90 + 20, j * 90 + 70, 70, 70); 
          }      
       }      
    }
@@ -34,7 +34,7 @@ public class GUI extends JPanel {
          g.setColor(Color.RED);
          color = "red";
       }  
-      g.fillOval(x * 90 + 20, 470 - (y[x] - 1) * 90, 72, 72); 
+      g.fillOval(x * 90 + 20, 520 - (y[x] - 1) * 90, 72, 72); 
       return color;    
    }
 }
