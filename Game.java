@@ -3,7 +3,7 @@
  * Assignment: Final Project
  * Purpose: To show what I have learned this year.
  *
- * @version 06/13/18
+ * @version 06/18/18
  */
 
 import javax.swing.*;
@@ -40,7 +40,7 @@ public class Game {
       }
       
       text.setText(label);
-      text.setBounds(0, 600, 660, 30);
+      text.setBounds(0, 650, 660, 30);
       text.setHorizontalAlignment(JLabel.CENTER);
       text.setFont(new Font("Arial", 0, 30));
       panel.add(text);
@@ -54,7 +54,7 @@ public class Game {
    public void start() {
       text.setText("Red's Move");
       text.setForeground(Color.RED);
-      text.setBounds(0, 600, 660, 30);
+      text.setBounds(0, 650, 660, 30);
       text.setHorizontalAlignment(JLabel.CENTER);
       text.setFont(new Font("Arial", 0, 30));
       panel.add(text);
@@ -66,7 +66,7 @@ public class Game {
       }
       
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      frame.setSize(660, 670);
+      frame.setSize(660, 720);
       frame.setTitle("Connect Four");
       
       panel.setLayout(null);
@@ -74,6 +74,29 @@ public class Game {
       frame.add(panel);
       frame.setVisible(true);
       frame.setResizable(false);
+      
+      JLabel title = new JLabel();
+      title.setText("Connect Four");
+      title.setForeground(Color.RED);
+      title.setBounds(25,10,600,50);
+      title.setFont(new Font("Arial", 1, 50));
+      panel.add(title);
+      
+      JButton restart = new JButton("Restart");
+      restart.setBounds(530, 22, 100, 30);
+      restart.setBackground(Color.CYAN);
+      restart.setBorderPainted(false);
+      panel.add(restart);
+      
+      restart.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mouseEntered(java.awt.event.MouseEvent evt) {
+            restart.setBackground(Color.RED);
+         }
+
+         public void mouseExited(java.awt.event.MouseEvent evt) {
+            restart.setBackground(Color.CYAN);
+         }
+      });
       
       JButton b1 = new JButton("1");
       JButton b2 = new JButton("2");
@@ -83,13 +106,13 @@ public class Game {
       JButton b6 = new JButton("6");
       JButton b7 = new JButton("7");
   
-      b1.setBounds(20, 555, 70, 30);
-      b2.setBounds(110, 555, 70, 30);
-      b3.setBounds(200, 555, 70, 30);
-      b4.setBounds(290, 555, 70, 30);
-      b5.setBounds(380, 555, 70, 30);
-      b6.setBounds(470, 555, 70, 30);
-      b7.setBounds(560, 555, 70, 30);
+      b1.setBounds(20, 605, 70, 30);
+      b2.setBounds(110, 605, 70, 30);
+      b3.setBounds(200, 605, 70, 30);
+      b4.setBounds(290, 605, 70, 30);
+      b5.setBounds(380, 605, 70, 30);
+      b6.setBounds(470, 605, 70, 30);
+      b7.setBounds(560, 605, 70, 30);
       
       b1.setBackground(Color.CYAN);
       b2.setBackground(Color.CYAN);
@@ -106,7 +129,6 @@ public class Game {
       b5.setBorderPainted(false);
       b6.setBorderPainted(false);
       b7.setBorderPainted(false);
-      
       
       //mouse listeners
       b1.addMouseListener(new java.awt.event.MouseAdapter() {
