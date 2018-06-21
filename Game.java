@@ -40,7 +40,7 @@ public class Game {
       }
       
       text.setText(label);
-      text.setBounds(0, 650, 660, 30);
+      text.setBounds(0, 645, 660, 30);
       text.setHorizontalAlignment(JLabel.CENTER);
       text.setFont(new Font("Arial", 0, 30));
       panel.add(text);
@@ -50,11 +50,32 @@ public class Game {
       win = Win.win(grid);
    }
    
+   public void RestartTriggered() {
+      for (int i = 0; i < 6; i++) {
+         for (int j = 0; j < 7; j++) { 
+            grid[i][j] = "empty";
+         }
+      }
+      
+      for (int i = 0; i < 7; i++) {
+          y[i] = 0;
+      }
+      
+      
+      g.setColor(Color.WHITE);
+      for (int i = 0; i < 7; i++) {
+         for (int j = 0; j < 6; j++) {         
+            g.fillOval(i * 90 + 20, 90 + 70, 70, 70);  
+            g.fillOval(i * 90 + 20, j * 90 + 70, 70, 70); 
+         }      
+      }        
+   }
+   
    //draws the blue board and the buttons, starts the action listener
    public void start() {
       text.setText("Red's Move");
       text.setForeground(Color.RED);
-      text.setBounds(0, 650, 660, 30);
+      text.setBounds(0, 645, 660, 30);
       text.setHorizontalAlignment(JLabel.CENTER);
       text.setFont(new Font("Arial", 0, 30));
       panel.add(text);
@@ -97,6 +118,14 @@ public class Game {
             restart.setBackground(Color.CYAN);
          }
       });
+      
+      restart.addActionListener(new ActionListener() 
+         {
+            public void actionPerformed(ActionEvent e)
+            {
+               RestartTriggered();
+            }    
+         });
       
       JButton b1 = new JButton("1");
       JButton b2 = new JButton("2");
